@@ -31,3 +31,7 @@
 #slider-green .thumb {
   background: green;
 }
+
+.btn {
+  padding: 10px 20px;
+}
