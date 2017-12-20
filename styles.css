@@ -7,6 +7,7 @@
   width: 310px;
   height: 15px;
   margin: 5px;
+  margin-bottom: 15px;
 }
   
 .thumb {
@@ -16,6 +17,17 @@
   position: relative;
   left: 10px;
   top: -5px;
-  background: blue;
   cursor: pointer;
+}
+
+#slider-blue .thumb {
+  background: blue;
+}
+
+#slider-red .thumb {
+  background: red;
+}
+
+#slider-green .thumb {
+  background: green;
 }

@@ -9,10 +9,6 @@ class ButtonGenerator {
         this._thumb.onmousedown = this._onMouseDown.bind(this);
         this._onMouseUp = this._onMouseUp.bind(this);
         this._onMouseMove = this._onMouseMove.bind(this);
-
-        // this._thumb.ondragstart = function() {
-        //     return false;
-        // };
     }
 
     _onMouseDown(event) {
@@ -26,7 +22,7 @@ class ButtonGenerator {
     }
 
     _onMouseMove(event) {
-        if ( this._isNotOverLeft(event) && this._isNotOverRight(event)) {
+        if (this._isNotOverLeft(event) && this._isNotOverRight(event)) {
             this._thumb.style.left = event.clientX - this._sliderClientRect.left + "px";
         }
     }
@@ -41,4 +37,6 @@ class ButtonGenerator {
     }
 }
 
-new ButtonGenerator( {element: document.body.querySelector('#slider')} );
+new ButtonGenerator( {element: document.body.querySelector('#slider-blue')} );
+new ButtonGenerator( {element: document.body.querySelector('#slider-red')} );
+new ButtonGenerator( {element: document.body.querySelector('#slider-green')} );
