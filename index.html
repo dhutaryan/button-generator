@@ -7,20 +7,22 @@
     <title>Button Generator</title>
     <link rel="stylesheet" href="styles.css">
 
-    <script src="app.js" defer></script>
+    <script src="js/app.js" type="module" defer></script>
 </head>
 <body>
-    <div id="slider-red" class="slider">
-        <div class="thumb"></div>
-    </div>
-    <div id="slider-green" class="slider">
-        <div class="thumb"></div>
-    </div>
-    <div id="slider-blue" class="slider">
-        <div class="thumb"></div>
-    </div>
-    <div>
-        <button class="btn">BUTTON</button>
+    <div class="wrapper" data-component="generator">
+        <div id="slider-red" class="slider">
+            <div class="thumb"></div>
+        </div>
+        <div id="slider-green" class="slider">
+            <div class="thumb"></div>
+        </div>
+        <div id="slider-blue" class="slider">
+            <div class="thumb"></div>
+        </div>
+        <div>
+            <button class="btn" data-component="button">BUTTON</button>
+        </div>
     </div>
 </body>
 </html>
