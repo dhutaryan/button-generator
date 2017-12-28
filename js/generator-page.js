@@ -1,25 +1,23 @@
 import ButtonExample from './button-example.js';
-import SliderRed from './Sliders/slider-red.js';
-import SliderGreen from './Sliders/slider-green.js';
-import SliderBlue from './Sliders/slider-blue.js';
+// import SliderRed from './Sliders/slider-red.js';
+// import SliderGreen from './Sliders/slider-green.js';
+// import SliderBlue from './Sliders/slider-blue.js';
+import SliderComponent from './Sliders/slider-component.js';
 
 export default class GeneratorPage {
     _initComponents() {
-        this.redSlider = new SliderRed({
+        this.redSlider = new SliderComponent({
             element: this._element.querySelector('#slider-red'),
             eventName: 'red.move'
         });
-        new SliderGreen({
+        this.greenSlider = new SliderComponent({
             element: this._element.querySelector('#slider-green'),
             eventName: 'green.move'
         });
-        new SliderBlue({
+        this.blueSlider = new SliderComponent({
             element: this._element.querySelector('#slider-blue'),
             eventName: 'blue.move'
         });
-        // new ButtonExample({
-        //     element: this._element.querySelector('[data-component="button"]')
-        // });
     }
 
     constructor({ element }) {
@@ -28,8 +26,8 @@ export default class GeneratorPage {
 
         this._RGBColorBg = {
             redColor: parseInt(getComputedStyle(this.redSlider._thumb).left),
-            greenColor: parseInt(getComputedStyle(this.redSlider._thumb).left),
-            blueColor: parseInt(getComputedStyle(this.redSlider._thumb).left)
+            greenColor: parseInt(getComputedStyle(this.greenSlider._thumb).left),
+            blueColor: parseInt(getComputedStyle(this.blueSlider._thumb).left)
         }
         this.changeButtonColor();
 
